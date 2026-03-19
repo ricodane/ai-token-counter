@@ -3,4 +3,5 @@ node_modules/
 .wxt/
 *.zip
 .env.local
+.env.production
 .vscode/

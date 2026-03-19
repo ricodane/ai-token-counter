@@ -106,6 +106,7 @@ export default function App() {
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
             rows={8}
+            maxLength={10000}
           />
         </div>
 

@@ -16,11 +16,11 @@ const MODELS: Model[] = [
   // https://openai.com/api/pricing
   { value: "openai", label: "GPT-5.4", pricePerMillion: 2.50 },
   // https://www.anthropic.com/pricing#api
-  { value: "claude", label: "Claude Sonnet 4.5", pricePerMillion: 3.0 },
+  { value: "claude", label: "Claude Sonnet 4.6", pricePerMillion: 3.0 },
   // https://ai.google.dev/pricing
   { value: "gemini", label: "Gemini 3.1 Pro Preview", pricePerMillion: 1.25 },
   // https://api-docs.deepseek.com/quick_start/pricing
-  { value: "deepseek", label: "DeepSeek V3", pricePerMillion: 0.28 },
+  { value: "deepseek", label: "DeepSeek V3.2", pricePerMillion: 0.28 },
 ];
 
 export default function App() {

@@ -1,6 +1,6 @@
 {
-  "name": "AI Tokenizer by SpacePrompts",
-  "description": "Count tokens and estimate costs for ChatGPT, Claude, Gemini, DeepSeek.",
+  "name": "ai-token-counter-cost-calculator",
+  "description": "Count tokens and estimate AI costs for any model. Supports ChatGPT, Claude, Gemini, and DeepSeek",
   "private": true,
   "version": "1.0.0",
   "type": "module",

@@ -1,4 +1,4 @@
-# AI Tokenizer — Chrome Extension
+# AI Token Counter & Cost Calculator by SpacePrompts
 
 A Chrome extension by [SpacePrompts](https://www.spaceprompts.com) that counts tokens and estimates costs for your AI prompts right from your browser.
 

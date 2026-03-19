@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 const API_URL = import.meta.env.WXT_API_URL
+const EXTENSION_KEY = import.meta.env.WXT_EXTENSION_KEY
 
 type Model = {
   value: string;
@@ -48,13 +49,15 @@ export default function App() {
     setError(null);
     try {
       const params = new URLSearchParams({ prompt: text, model: modelValue });
-      const res = await fetch(`${API_URL}?${params}`);
+      const res = await fetch(`${API_URL}?${params}`, {
+        headers: { "X-Extension-Key": EXTENSION_KEY },
+      });
       if (!res.ok) throw new Error("Failed to count tokens");
       const data = await res.json();
       setTokenCount(data.token_count);
       setCharCount(data.character_count);
     } catch {
-      setError("Could not reach the tokenizer service.");
+      setError("Sorry, we couldn't connect to server. Please try again in a moment.");
       setTokenCount(null);
     } finally {
       setIsLoading(false);
@@ -63,6 +66,7 @@ export default function App() {
 
   useEffect(() => {
     if (debounceRef.current) clearTimeout(debounceRef.current);
+    if (prompt.trim()) setIsLoading(true);
     debounceRef.current = setTimeout(() => {
       fetchTokens(prompt, model);
     }, 500);
@@ -75,10 +79,9 @@ export default function App() {
     <div className="container">
       <header className="header">
         <div className="logo">
-          <span className="logo-text">AI Tokenizer by SpacePrompts</span>
+          <span className="logo-text">AI Token Counter & Cost Calculator</span>
         </div>
       </header>
-
       <div className="body">
         <div className="field">
           <label className="label">Model</label>

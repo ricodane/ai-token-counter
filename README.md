@@ -9,7 +9,7 @@ A Chrome extension by [SpacePrompts](https://www.spaceprompts.com) that counts t
 - Character count
 - Real-time results as you type
 
-![Preview](src/public/images/preview.png)
+![Preview](public/images/preview.png)
 
 ## Supported Models
 

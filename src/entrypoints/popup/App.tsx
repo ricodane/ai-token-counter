@@ -14,7 +14,7 @@ type Model = {
 
 const MODELS: Model[] = [
   // https://openai.com/api/pricing
-  { value: "openai", label: "GPT-5", pricePerMillion: 1.25 },
+  { value: "openai", label: "GPT-5.4", pricePerMillion: 2.50 },
   // https://www.anthropic.com/pricing#api
   { value: "claude", label: "Claude Sonnet 4.5", pricePerMillion: 3.0 },
   // https://ai.google.dev/pricing

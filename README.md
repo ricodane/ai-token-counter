@@ -1,10 +1,10 @@
 # AI Tokenizer — Chrome Extension
 
-A Chrome extension by [SpacePrompts](https://www.spaceprompts.com) that counts tokens and estimates costs for your AI prompts — right from your browser.
+A Chrome extension by [SpacePrompts](https://www.spaceprompts.com) that counts tokens and estimates costs for your AI prompts right from your browser.
 
 ## Features
 
-- Count tokens for **GPT-5**, **Claude Sonnet 4.5**, **Gemini 3.1 Pro Preview**, and **DeepSeek V3**
+- Count tokens for **GPT-5.4**, **Claude Sonnet 4.5**, **Gemini 3.1 Pro Preview**, and **DeepSeek V3**
 - Estimated input cost per model
 - Character count
 - Real-time results as you type
@@ -13,7 +13,7 @@ A Chrome extension by [SpacePrompts](https://www.spaceprompts.com) that counts t
 
 | Model | Provider | Input Price |
 |-------|----------|-------------|
-| GPT-5 | OpenAI | $1.25 / 1M tokens |
+| GPT-5.4 | OpenAI | $2.50 / 1M tokens |
 | Claude Sonnet 4.5 | Anthropic | $3.00 / 1M tokens |
 | Gemini 3.1 Pro Preview | Google | $1.25 / 1M tokens |
 | DeepSeek V3 | DeepSeek | $0.28 / 1M tokens |

@@ -57,6 +57,11 @@ pnpm build
 |----------|-------------|
 | `WXT_MANIFEST_KEY` | Chrome extension manifest key (optional, for dev) |
 | `WXT_API_URL` | Tokenizer API endpoint |
+| `WXT_EXTENSION_KEY` | API key sent via `X-Extension-Key` header |
+
+## API Rate Limit
+
+The tokenizer API is rate limited to **60 requests per minute** per IP address. Requests exceeding this limit will receive a `429 Too Many Requests` response.
 
 ## Acknowledgements
 

@@ -22,7 +22,6 @@ A Chrome extension by [SpacePrompts](https://www.spaceprompts.com) that counts t
 
 - [WXT](https://wxt.dev) — Chrome extension framework
 - React + TypeScript
-- Vite
 
 ## Development
 

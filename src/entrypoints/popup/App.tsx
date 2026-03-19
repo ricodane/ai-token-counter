@@ -1,7 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 
-const LOADING_WORDS = ["Calculating", "Estimating", "Analyzing", "Processing"];
-
 const API_URL = import.meta.env.WXT_API_URL
 
 type Model = {
@@ -29,7 +27,6 @@ export default function App() {
   const [tokenCount, setTokenCount] = useState<number | null>(null);
   const [charCount, setCharCount] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
-  const [loadingWord, setLoadingWord] = useState("Calculating");
   const [error, setError] = useState<string | null>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -63,19 +60,6 @@ export default function App() {
       setIsLoading(false);
     }
   };
-
-  useEffect(() => {
-    if (!isLoading) {
-      setLoadingWord("Calculating");
-      return;
-    }
-    let index = 0;
-    const interval = setInterval(() => {
-      index = (index + 1) % LOADING_WORDS.length;
-      setLoadingWord(LOADING_WORDS[index]);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, [isLoading]);
 
   useEffect(() => {
     if (debounceRef.current) clearTimeout(debounceRef.current);
@@ -113,30 +97,13 @@ export default function App() {
 
         <div className="field">
           <label className="label">Prompt</label>
-          <div className="editor-wrapper">
-            <div className={`textarea-overlay${isLoading ? " loading" : ""}`}>
-              <textarea
-                className="textarea"
-                placeholder="Paste your prompt here..."
-                value={prompt}
-                onChange={(e) => setPrompt(e.target.value)}
-                rows={8}
-              />
-            </div>
-            {isLoading && (
-              <div className="loader-wrapper">
-                <div className="loader-content">
-                  <div className="circle" />
-                  <div className="circle" />
-                  <div className="circle" />
-                </div>
-                <div className="calculate-wrapper">
-                  <span key={loadingWord} className="loading-word">{loadingWord}</span>
-                  <span>tokens</span>
-                </div>
-              </div>
-            )}
-          </div>
+          <textarea
+            className="textarea"
+            placeholder="Paste your prompt here..."
+            value={prompt}
+            onChange={(e) => setPrompt(e.target.value)}
+            rows={8}
+          />
         </div>
 
         {error && <div className="error">{error}</div>}

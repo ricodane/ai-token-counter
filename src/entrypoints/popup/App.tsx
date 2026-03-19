@@ -5,11 +5,11 @@ const API_URL = import.meta.env.WXT_API_URL
 type Model = {
   value: string;
   label: string;
-  // Price per 1M input tokens in USD
-  // Source for each model listed below
   pricePerMillion: number;
 };
 
+// Price per 1M input tokens in USD
+// Source for each model listed below
 const MODELS: Model[] = [
   // https://openai.com/api/pricing
   { value: "openai", label: "GPT-5.4", pricePerMillion: 2.50 },

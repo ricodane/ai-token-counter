@@ -9,6 +9,8 @@ A Chrome extension by [SpacePrompts](https://www.spaceprompts.com) that counts t
 - Character count
 - Real-time results as you type
 
+![Preview](src/public/images/preview.png)
+
 ## Supported Models
 
 | Model | Provider | Input Price |
@@ -17,11 +19,6 @@ A Chrome extension by [SpacePrompts](https://www.spaceprompts.com) that counts t
 | Claude Sonnet 4.6 | Anthropic | $3.00 / 1M tokens |
 | Gemini 3.1 Pro Preview | Google | $1.25 / 1M tokens |
 | DeepSeek V3.2 | DeepSeek | $0.28 / 1M tokens |
-
-## Tech Stack
-
-- [WXT](https://wxt.dev) — Chrome extension framework
-- React + TypeScript
 
 ## Development
 
@@ -60,6 +57,13 @@ pnpm build
 |----------|-------------|
 | `WXT_MANIFEST_KEY` | Chrome extension manifest key (optional, for dev) |
 | `WXT_API_URL` | Tokenizer API endpoint |
+
+## Acknowledgements
+
+Token counting is powered by the following open source libraries:
+
+- [tiktoken](https://github.com/openai/tiktoken) — OpenAI's tokenizer for GPT models
+- [HuggingFace Tokenizers](https://github.com/huggingface/tokenizers) — used for Claude, Gemini, and DeepSeek models
 
 ## Issues
 

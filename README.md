@@ -1,6 +1,10 @@
 # AI Token Counter & Cost Calculator by SpacePrompts
 
-A Chrome extension by [SpacePrompts](https://www.spaceprompts.com) that counts tokens and estimates costs for your AI prompts right from your browser.
+A browser extension by [SpacePrompts](https://www.spaceprompts.com) that counts tokens and estimates costs for your AI prompts right from your browser.
+
+## Install
+
+[![Microsoft Edge](https://img.shields.io/badge/Microsoft_Edge-Add--ons-0078D7?logo=microsoft-edge&logoColor=white)](https://microsoftedge.microsoft.com/addons/detail/ai-prompt-token-counter/dmoppmggfgoneehkojiahcdelakohaon)
 
 ## Features
 

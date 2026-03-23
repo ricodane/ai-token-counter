@@ -8,6 +8,14 @@ export default defineConfig({
     version: packageJson.version,
     name: packageJson.name,
     description: packageJson.description,
-    permissions: ['storage'],
+    browser_specific_settings: {
+      gecko: {
+        id: 'token-counter-ai@spaceprompts.com',
+        data_collection_permissions: {
+          required: ['none'],
+          optional: [],
+        },
+      } as any,
+    },
   },
 })

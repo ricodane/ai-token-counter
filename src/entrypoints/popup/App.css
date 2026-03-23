@@ -74,21 +74,59 @@ html, body {
   color: var(--text-muted);
 }
 
-.select {
+.dropdown {
+  position: relative;
   width: 100%;
-  padding: 8px 36px 8px 10px;
+}
+
+.dropdown-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
   background-color: var(--bg-input);
   color: var(--text-primary);
   border: 1px solid var(--border-primary);
   border-radius: 8px;
   font-size: 14px;
+  font-family: inherit;
   outline: none;
   cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
+  text-align: left;
+}
+
+.dropdown-trigger svg {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.dropdown-option {
+  width: 100%;
+  padding: 8px 10px;
+  background: none;
+  color: var(--text-primary);
+  border: none;
+  font-size: 14px;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-option.selected {
+  background-color: var(--bg-tertiary);
 }
 
 .textarea {

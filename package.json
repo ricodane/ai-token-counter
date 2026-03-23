@@ -1,5 +1,5 @@
 {
-  "name": "AI Token Counter & Cost Calculator",
+  "name": "AI Prompt Token Counter",
   "description": "Count tokens and estimate AI costs for any model. Supports ChatGPT, Claude, Gemini, and DeepSeek",
   "private": true,
   "version": "1.0.0",

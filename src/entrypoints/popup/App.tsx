@@ -29,7 +29,19 @@ export default function App() {
   const [charCount, setCharCount] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const selectedModel = MODELS.find((m) => m.value === model)!;
 
@@ -85,17 +97,32 @@ export default function App() {
       <div className="body">
         <div className="field">
           <label className="label">Model</label>
-          <select
-            className="select"
-            value={model}
-            onChange={(e) => setModel(e.target.value)}
-          >
-            {MODELS.map((m) => (
-              <option key={m.value} value={m.value}>
-                {m.label}
-              </option>
-            ))}
-          </select>
+          <div className="dropdown" ref={dropdownRef}>
+            <button
+              className="dropdown-trigger"
+              onClick={() => setIsDropdownOpen((o) => !o)}
+              type="button"
+            >
+              <span>{selectedModel.label}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            {isDropdownOpen && (
+              <div className="dropdown-menu">
+                {MODELS.map((m) => (
+                  <button
+                    key={m.value}
+                    className={`dropdown-option${m.value === model ? " selected" : ""}`}
+                    onClick={() => { setModel(m.value); setIsDropdownOpen(false); }}
+                    type="button"
+                  >
+                    {m.label}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="field">

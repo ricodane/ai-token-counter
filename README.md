@@ -4,6 +4,7 @@ A browser extension by [SpacePrompts](https://www.spaceprompts.com) that counts 
 
 ## Install
 
+[![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Install-4285F4?logo=google-chrome&logoColor=white)](https://chromewebstore.google.com/detail/ai-prompt-token-counter/kabhjbigddmanlodabhamcokakmajcmi)
 [![Microsoft Edge](https://img.shields.io/badge/Microsoft_Edge-Add--ons-0078D7?logo=microsoft-edge&logoColor=white)](https://microsoftedge.microsoft.com/addons/detail/ai-prompt-token-counter/dmoppmggfgoneehkojiahcdelakohaon)
 
 ## Features

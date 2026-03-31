@@ -10,7 +10,7 @@ A browser extension by [SpacePrompts](https://www.spaceprompts.com) that counts 
 
 ## Features
 
-- Count tokens for **GPT-5.4**, **Claude Sonnet 4.6**, **Gemini 3.1 Pro Preview**, and **DeepSeek V3.2**
+- Count tokens for **GPT-5.4**, **Claude Sonnet 4.6**, **Gemini 3.1 Pro Preview**, **DeepSeek V3.2**, **Qwen 3.5**, and **Llama 4 Maverick**
 - Estimated input cost per model
 - Character count
 - Real-time results as you type
@@ -23,8 +23,10 @@ A browser extension by [SpacePrompts](https://www.spaceprompts.com) that counts 
 |-------|----------|-------------|
 | GPT-5.4 | OpenAI | $2.50 / 1M tokens |
 | Claude Sonnet 4.6 | Anthropic | $3.00 / 1M tokens |
-| Gemini 3.1 Pro Preview | Google | $1.25 / 1M tokens |
+| Gemini 3.1 Pro Preview | Google | $2.00 / 1M tokens (≤200K), $4.00 / 1M tokens (>200K) |
 | DeepSeek V3.2 | DeepSeek | $0.28 / 1M tokens |
+| Qwen 3.5 | Alibaba | $0.40 / 1M tokens |
+| Llama 4 Maverick | Meta | $0.19 / 1M tokens |
 
 ## Development
 
@@ -74,7 +76,7 @@ The tokenizer API is rate limited to **60 requests per minute** per IP address. 
 Token counting is powered by the following open source libraries:
 
 - [tiktoken](https://github.com/openai/tiktoken) — OpenAI's tokenizer for GPT models
-- [HuggingFace Tokenizers](https://github.com/huggingface/tokenizers) — used for Claude, Gemini, and DeepSeek models
+- [HuggingFace Tokenizers](https://github.com/huggingface/tokenizers) — used for Claude, Gemini, DeepSeek, Qwen, and Llama models
 
 ## Issues
 

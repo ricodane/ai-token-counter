@@ -13,15 +13,15 @@ type Model = {
 // Source for each model listed below
 const MODELS: Model[] = [
   // https://openai.com/api/pricing
-  { value: "openai", label: "GPT-5.4", pricePerMillion: 2.50 },
+  { value: "openai", label: "GPT-5.5", pricePerMillion: 5.0 },
   // https://www.anthropic.com/pricing#api
   { value: "claude", label: "Claude Sonnet 4.6", pricePerMillion: 3.0 },
   // https://ai.google.dev/pricing - $2.00/M (≤200k tokens), $4.00/M (>200k tokens)
   { value: "gemini", label: "Gemini 3.1 Pro Preview", pricePerMillion: 2.00 },
   // https://api-docs.deepseek.com/quick_start/pricing
-  { value: "deepseek", label: "DeepSeek V3.2", pricePerMillion: 0.28 },
+  { value: "deepseek", label: "DeepSeek V4 Flash", pricePerMillion: 0.14 },
   // https://help.aliyun.com/zh/model-studio/getting-started/models
-  { value: "qwen", label: "Qwen 3.5", pricePerMillion: 0.40 },
+  { value: "qwen", label: "Qwen 3.6", pricePerMillion: 0.50 },
   // https://ai.meta.com/blog/llama-4-multimodal-intelligence - $0.19–$0.49 blended, using lower bound
   { value: "llama", label: "Llama 4 Maverick", pricePerMillion: 0.19 },
 ];

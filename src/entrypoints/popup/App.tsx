@@ -13,11 +13,11 @@ type Model = {
 // Source for each model listed below
 const MODELS: Model[] = [
   // https://openai.com/api/pricing
-  { value: "openai", label: "GPT-5.5", pricePerMillion: 5.0 },
+  { value: "openai", label: "GPT-5.6 Sol", pricePerMillion: 5.0 },
   // https://www.anthropic.com/pricing#api
   { value: "claude", label: "Claude Sonnet 4.6", pricePerMillion: 3.0 },
-  // https://ai.google.dev/pricing - $2.00/M (≤200k tokens), $4.00/M (>200k tokens)
-  { value: "gemini", label: "Gemini 3.1 Pro Preview", pricePerMillion: 2.00 },
+  // https://ai.google.dev/gemini-api/docs/pricing 
+  { value: "gemini", label: "Gemini 3.6 Flash", pricePerMillion: 0.75 },
   // https://api-docs.deepseek.com/quick_start/pricing
   { value: "deepseek", label: "DeepSeek V4 Flash", pricePerMillion: 0.14 },
   // https://help.aliyun.com/zh/model-studio/getting-started/models

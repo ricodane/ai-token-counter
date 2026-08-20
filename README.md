@@ -10,7 +10,7 @@ A browser extension by [SpacePrompts](https://www.spaceprompts.com) that counts 
 
 ## Features
 
-- Count tokens for **GPT-5.5**, **Claude Sonnet 4.6**, **Gemini 3.1 Pro Preview**, **DeepSeek V4 Flash**, **Qwen 3.6**, and **Llama 4 Maverick**
+- Count tokens for **GPT-5.6 Sol**, **Claude Sonnet 4.6**, **Gemini 3.6 Flash**, **DeepSeek V4 Flash**, **Qwen 3.6**, and **Llama 4 Maverick**
 - Estimated input cost per model
 - Character count
 - Real-time results as you type
@@ -21,9 +21,9 @@ A browser extension by [SpacePrompts](https://www.spaceprompts.com) that counts 
 
 | Model | Provider | Input Price |
 |-------|----------|-------------|
-| GPT-5.5 | OpenAI | $5.00 / 1M tokens |
+| GPT-5.6 Sol | OpenAI | $5.00 / 1M tokens |
 | Claude Sonnet 4.6 | Anthropic | $3.00 / 1M tokens |
-| Gemini 3.1 Pro Preview | Google | $2.00 / 1M tokens (≤200K), $4.00 / 1M tokens (>200K) |
+| Gemini 3.6 Flash | Google | $0.75 / 1M tokens |
 | DeepSeek V4 Flash | DeepSeek | $0.14 / 1M tokens |
 | Qwen 3.6 | Alibaba | $0.50 / 1M tokens |
 | Llama 4 Maverick | Meta | $0.19 / 1M tokens |
